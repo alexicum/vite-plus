@@ -249,8 +249,8 @@ catalogs:
       specifier: 5.1.0
       version: 5.1.0
     bingo:
-      specifier: ^0.13.2
-      version: 0.13.2
+      specifier: ^0.15.0
+      version: 0.15.0
     cac:
       specifier: ^7.1.0
       version: 7.1.0
@@ -508,7 +508,7 @@ importers:
         version: 0.2.0
       bingo:
         specifier: 'catalog:'
-        version: 0.13.2
+        version: 0.15.0(zod@4.6.5)
       cac:
         specifier: 'catalog:'
         version: 7.1.0
@@ -4223,22 +4223,27 @@ packages:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
 
-  bingo-fs@0.6.0:
-    resolution: {integrity: sha512-vKEkj1R0jPIjEAUWJB/F3sDgn+mtelbkRs+mmU5CoMZpKQ04WavA4DWWO/Jq88jY840PrqEJInuC9ue4RvUV0g==}
-    engines: {node: '>=18'}
+  bingo-fs@0.7.0:
+    resolution: {integrity: sha512-6ssc4svRqUN3YNlzBMHqVyO24dD0G1UZd8VilFEzSqthRvPV0xHBN0iXRgiLC5VhOwJyMtqQzs2/ft+Gl1arHw==}
+    engines: {node: ^22.15.0 || ^24.15.0 || >=26.0.0}
 
-  bingo-requests@0.5.6:
-    resolution: {integrity: sha512-cpvNWqMlFkbynxJzyKJ4B/R57zR2MsPkJSldNJRxSTN6LlgB9uzQ8jAeDZy2ENoUHNlH5nApv2JyHxVqFxcjSg==}
-    engines: {node: '>=18'}
+  bingo-requests@0.6.0:
+    resolution: {integrity: sha512-00RdK8M2agqi5Fu+jC/oLWL1c9cDTcD3mxZJzTQS88yiwhrodKpeIv9aByMGxQiuNQuPwU741yB1SgG8AEQoRQ==}
+    engines: {node: ^22.15.0 || ^24.15.0 || >=26.0.0}
 
-  bingo-systems@0.7.0:
-    resolution: {integrity: sha512-Aw5dokVSssSagrVcib9dfVYobp0h/pJKb5m+PhCkAjYkzgGiEN4E56uBVeB42rMAedg7/hxvhFsCsH6wthrDFw==}
-    engines: {node: '>=22'}
+  bingo-systems@0.8.0:
+    resolution: {integrity: sha512-AvVE1kyPC5w367+jzZ64z00J0uAIvVnS7FdTcm+JkIIZt0/e1hhFrgQpfrtlHeh4Zr9ZQ9ViY5ajwFSsYGtCtA==}
+    engines: {node: ^22.15.0 || ^24.15.0 || >=26.0.0}
 
-  bingo@0.13.2:
-    resolution: {integrity: sha512-sgSZOjlD2c8Lrsgn1NBvcxNoH1tzVL+Nu3QKfg8Y9ciBP5qvXskadH7u0zpRIdtCXzOqviHyubYcInYPnqqR3Q==}
-    engines: {node: '>=22'}
+  bingo@0.15.0:
+    resolution: {integrity: sha512-tYleUoZttXhGK0x794Oxns7/eE23nzzfH4uYSolcQP/9BduFBej4Eg0cbaSfubOJg2qT8lGF/Y+8FfIVjKs2dw==}
+    engines: {node: ^22.15.0 || ^24.15.0 || >=26.0.0}
     hasBin: true
+    peerDependencies:
+      zod: ^4.4.3
+    peerDependenciesMeta:
+      zod:
+        optional: true
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
@@ -9549,26 +9554,26 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
-  bingo-fs@0.6.0: {}
+  bingo-fs@0.7.0: {}
 
-  bingo-requests@0.5.6:
+  bingo-requests@0.6.0:
     dependencies:
       '@octokit/types': 16.0.0
 
-  bingo-systems@0.7.0:
+  bingo-systems@0.8.0:
     dependencies:
-      bingo-fs: 0.6.0
+      bingo-fs: 0.7.0
       execa: 9.6.1
       get-github-auth-token: 0.1.2
       octokit: 5.0.5
 
-  bingo@0.13.2:
+  bingo@0.15.0(zod@4.6.5):
     dependencies:
       '@clack/prompts': 0.11.0
       all-properties-lazy: 0.1.0
-      bingo-fs: 0.6.0
-      bingo-requests: 0.5.6
-      bingo-systems: 0.7.0
+      bingo-fs: 0.7.0
+      bingo-requests: 0.6.0
+      bingo-systems: 0.8.0
       cached-factory: 0.3.0
       call-id: 0.1.0
       get-github-auth-token: 0.1.2
@@ -9580,6 +9585,7 @@ snapshots:
       read-pkg: 10.0.0
       slugify: 1.6.9
       without-undefined-properties: 0.1.2
+    optionalDependencies:
       zod: 4.6.5
 
   boolbase@1.0.0: {}
